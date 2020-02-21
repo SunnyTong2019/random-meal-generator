@@ -44,3 +44,9 @@ ul {
   text-align: left;
 }
 
+#instructions {
+  display: inline-block;
+  width: 560px;
+  text-align: left;
+}
+

@@ -7,7 +7,7 @@ The app is single page application created with [Create React App](https://githu
 
 
 ## Deployed Link
-
+https://sunnytong2019.github.io/random-meal-generator/
 
 
 ## Motivation

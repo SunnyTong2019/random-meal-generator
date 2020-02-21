@@ -70,8 +70,8 @@ class App extends Component {
               <p><strong>Cooking Instructions:</strong></p>
               <p id="instructions">{this.state.meal.strInstructions}</p>
               <p><strong>Video Recipe:</strong></p>
-              <iframe width="560" height="315" title="video receipt" src={"http://www.youtube.com/embed/" + this.state.mealVideo}
-                frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+              {this.state.mealVideo ? (<iframe width="560" height="315" title="video receipt" src={"http://www.youtube.com/embed/" + this.state.mealVideo}
+                frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>) : null}
             </div>
           </div>
         </div>)

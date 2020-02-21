@@ -59,19 +59,26 @@ class App extends Component {
           <div className="card mb-3">
             <div className="card-body">
               <h4 className="card-title">{this.state.meal.strMeal}</h4>
-              <img width="560" height="315" src={this.state.meal.strMealThumb} alt="meal" className="mb-4" />
-              <p><strong>Category: </strong><span id="category">{this.state.meal.strCategory}</span></p>
-              <p><strong>Area: </strong><span id="area">{this.state.meal.strArea}</span></p>
-              {this.state.meal.strTags ? <p><strong>Tags: </strong><span id="tags">{this.state.meal.strTags}</span></p> : null}
+
+              <img width="30%" height="315" src={this.state.meal.strMealThumb} alt="meal" className="mb-4" />
+
+              <p><strong>Category: </strong>{this.state.meal.strCategory}</p>
+
+              <p><strong>Area: </strong>{this.state.meal.strArea}</p>
+
+              {this.state.meal.strTags ? <p><strong>Tags: </strong>{this.state.meal.strTags}</p> : null}
+
               <p><strong>Ingredients:</strong></p>
-              <ul id="ingredients">
+              <ul>
                 {this.state.mealIngredients.map((ingre, index) => <li key={index + 1}>{ingre}</li>)}
               </ul>
+
               <p><strong>Cooking Instructions:</strong></p>
               <p id="instructions">{this.state.meal.strInstructions}</p>
-              <p><strong>Video Recipe:</strong></p>
-              {this.state.mealVideo ? (<iframe width="560" height="315" title="video receipt" src={"https://www.youtube.com/embed/" + this.state.mealVideo}
-                frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>) : null}
+
+              {this.state.mealVideo ? (<div><p><strong>Video Recipe:</strong></p>
+                <iframe width="30%" height="315" title="video receipt" src={"https://www.youtube.com/embed/" + this.state.mealVideo}
+                  frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe></div>) : null}
             </div>
           </div>
         </div>)
